@@ -1,0 +1,183 @@
+---
+Title: Gaslight Software Blog
+Description: ''
+Posts:
+- PostId: 11100470803
+  Permalink: http://blog.gaslightsoftware.com/post/11100470803
+  Type: Text
+  Timestamp: 1317910628
+  Tags: []
+  Title: World Congress of Engineering Asset Management
+  Body: ! '<p>We have been working with <a href="http://assetricity.com/">Assetricity</a> implementing
+    the <a href="http://www.mimosa.org/">MIMOSA</a> Common Conceptual Object Model
+    information standard for operations and maintenance. This year the <a href="http://www.wceam.com/">WCEAM</a>
+    was held here in Cincinnati. I was able to attend the Interoperability for Asset
+    Management workshop for the last couple of days. While there we ratified the new
+    3.2.3 CCOM Markup Language standard I&#8217;ve been working on the last year or
+    so.</p>
+
+    <p>This project obviously has a lot of &#8220;big E&#8221; Enterprise baggage.
+    The weight of that opening paragraph alone rekindles my rebellion from our corporate
+    overlords. I&#8217;ve stuck with this project for several reasons though.</p>
+
+    <p>First, it&#8217;s really hard. Asset management, maintenance, and condition
+    monitoring are much more complicated than what I originally thought. It&#8217;s
+    an incredibly broad field with many diverse needs across almost all industries.
+    There have been many times when I thought, &#8220;there must be an easier way
+    to do this.&#8221; However, after understanding more of the context I&#8217;ve
+    often come around to understand why the complexity is needed. Even still it&#8217;s
+    almost become a cliche to remark on how hard this project is.</p>
+
+    <p>Second, the goal of the project is aimed squarely at interoperability. It hopes
+    to chart a course through very difficult waters to unite many of the big players
+    in the land of &#8220;big E&#8221;. Instead of staking out its turf and fighting
+    to the bitter end, the project is trying to help companies get their heterogeneous
+    environments to work together. From my early days working with (and on) Linux
+    to focusing on open web standards, this is a goal I can easily get behind.</p>
+
+    <p>In the Ruby (and also Agile) world we often talk about working in the Enterprise.
+    <a href="http://www.vanderburg.org/blog">Glenn Vanderburg</a> has said, &#8220;The
+    Enterprise isn&#8217;t ready for Ruby, it&#8217;s desperate for it.&#8221; After
+    escaping the Enterprise, I&#8217;ve been very suspicious of working with it again.
+    Frankly, I&#8217;ve passed on a couple projects that flew too close to the sun.
+    This is a project though that allows me to push my ideals into the Enterprise. </p>'
+- PostId: 11027905735
+  Permalink: http://blog.gaslightsoftware.com/post/11027905735
+  Type: Text
+  Timestamp: 1317754865
+  Tags:
+  - lucid
+  - rails
+  - ruby
+  - ruby on rails
+  - ubuntu
+  - lynx
+  - lucid lynx
+  - postgres
+  - postgresql
+  - heroku
+  - redcar
+  - git
+  Title: Configuring Ubuntu 10.04 for Rails Development
+  Body: ! '<p>While mentoring local high school students we needed to configure a
+    number of systems for <a href="http://rubyonrails.org/">Rails</a> development.
+    <a href="http://www.ubuntu.com/">Ubuntu</a> seemed to be the most reasonable choice
+    of OS. Below are the configuration steps we used broken into one-time setup, repeatable
+    demo app creation, and next steps.</p>
+
+
+    <p class="embed_gist"><a href="https://gist.github.com/1261571"><a href="https://gist.github.com/1261571">https://gist.github.com/1261571</a></a></p>'
+- PostId: 10859784934
+  Permalink: http://blog.gaslightsoftware.com/post/10859784934
+  Type: Text
+  Timestamp: 1317417342
+  Tags: []
+  Title: Web apps are dead, long live web apps
+  Body: ! '<p>I was at rubyconf today talking to a guy who hates building web apps.
+     I think a lot of developers feel this way, even a lot of web developers.  I know
+    I did, to some degree, even though I would tell you (and believe that) deploying
+    software as a web application is the best way to go for most cases.  What was
+    interesting to me in talking to the guy were some of the reasons he gave:</p>
+
+    <ul class="ul1"><li>Web apps are just way too chatty.  Every time I want to do
+    anything it&#8217;s a round trip to the server to figure out what to do next</li>
+
+    <li class="li1">Javascript is just such a horrible language.  It was some guys
+    experiment that got shoved into the browser and now I have to use it.  I don&#8217;t
+    have any choice in what language to use</li>
+
+    </ul><p class="p1">These are rough paraphrases; hopefully the speaker, should
+    he read this post, will forgive me.  But I think these are common reactions.  And
+    if you read no further in this post, here&#8217;s the TL;DR: they <strong>no longer
+    apply</strong>.  These reactions are based on the way we&#8217;ve built web apps
+    for the past 10 years or so.  But now it is time to stop.  </p>
+
+    <p class="p1">The chatty question first: the problem he alludes is one of the
+    most limiting features about the way web apps used to be built.  Because the first
+    version of the web is built around each user action resulting in an http request/response
+    cycle, server frameworks were architected around this idea.  The server framework
+    would handle each user action and send back a wad of html and javascript that
+    would (hopefully) tell the browser what to do next.  Building interesting, usable
+    applications this way is frustrating, to put it mildly.</p>
+
+    <p class="p1">But of course AJAX came along to rescue us from all this.  So what,
+    right?  AJAX is not new, it&#8217;s been mainstream for 5 years, at least.  But
+    believe it not, it&#8217;s full potential is really just now starting to be realized.
+     The full potential is that it frees us from tying user actions to a request/response
+    cycle.  But to realize this potential, we need to completely change the way we
+    build web applications.  As in, throw away almost everything you knew, including
+    (most of) your server side framework.  As in, if you&#8217;re building a web application
+    with the existing &#8220;state of the art&#8221; approach, you are a writing instant
+    legacy code.</p>
+
+    <p class="p1">So what do we do?  It&#8217;s time to re-tool: that server side
+    framework is on the wrong tier.  We need to move it to the client.  Backbone.js
+    is the best client side MVC framework I&#8217;ve used, but there are certainly
+    others.</p>
+
+    <p class="p1">The next question: javascript.  While I disagree with this guy&#8217;s
+    vehement hate, I can certainly understand the frustration.  Javascript has some
+    excellent features, but it&#8217;s not my favorite language.  And the fact that
+    I&#8217;m forced to use it makes me want to demand: FREEDOM! in a Mel Gibson painted
+    half-blue and being sliced open kind of way.  I want to choose what language to
+    use, and I want it to let me write expressive, beautiful code.</p>
+
+    <p class="p1">And now I can, with coffeescript.  I really can&#8217;t overstate
+    the effect this has had on my approach to web app development.  If I look back
+    honestly, I&#8217;ve known for maybe years that I&#8217;m doing it wrong.  Even
+    though I love my chosen server side language, Ruby, so very much, I could tell
+    that trying to build the UI for my web apps in it just wasn&#8217;t working out.
+     I just couldn&#8217;t bring myself to totally embrace the javascript, though
+    I tried (maybe a bit half-assedly).  But this changed completely with coffeescript.
+     I love the code I write in this language, and I can get behind it in a non-half-assed
+    way.</p>
+
+    <p class="p1">As you&#8217;ve probably picked up, I&#8217;m pretty passionate
+    about this stuff.  Part of it is that I&#8217;m so pumped that I finally have
+    good solutions to problems that have been vexing me for years.  But I also want
+    to help others get on board.  A lot of folks already are, but if you&#8217;re
+    not, or just want help getting there we got your back.  Gaslight Software is offering
+    our training class, <a href="http://training.gaslightsoftware.com">Beautiful Front
+    End Code with Backbone and Coffeescript</a> in San Francisco on November 7th and
+    8th.</p>'
+- PostId: 10566163162
+  Permalink: http://blog.gaslightsoftware.com/post/10566163162
+  Type: Photo
+  Timestamp: 1316809023
+  Tags:
+  - geekery
+  - dnd
+  Caption: <p>The last battle with Kalarel in &#8220;Keep on the Shadowfell&#8221;. </p>
+  PhotoURL-1280: http://www.tumblr.com/photo/1280/10566163162/2/tumblr_lrzs0qlZB61qlk81u
+  PhotoURL-500: http://27.media.tumblr.com/tumblr_lrzs0qlZB61qlk81uo2_500.jpg
+  PhotoURL-400: http://25.media.tumblr.com/tumblr_lrzs0qlZB61qlk81uo2_400.jpg
+  PhotoURL-250: http://25.media.tumblr.com/tumblr_lrzs0qlZB61qlk81uo2_250.jpg
+  PhotoURL-100: http://24.media.tumblr.com/tumblr_lrzs0qlZB61qlk81uo2_100.jpg
+  PhotoURL-75: http://29.media.tumblr.com/tumblr_lrzs0qlZB61qlk81uo2_75sq.jpg
+- PostId: 10171502842
+  Permalink: http://blog.gaslightsoftware.com/post/10171502842
+  Type: Photo
+  Timestamp: 1315942394
+  Tags:
+  - new sign
+  - awesome
+  Caption: <p>New signage!</p>
+  PhotoURL-1280: http://www.tumblr.com/photo/1280/10171502842/1/tumblr_lrh7ne1AGK1qlk81u
+  PhotoURL-500: http://26.media.tumblr.com/tumblr_lrh7ne1AGK1qlk81uo1_500.png
+  PhotoURL-400: http://28.media.tumblr.com/tumblr_lrh7ne1AGK1qlk81uo1_400.png
+  PhotoURL-250: http://28.media.tumblr.com/tumblr_lrh7ne1AGK1qlk81uo1_250.png
+  PhotoURL-100: http://24.media.tumblr.com/tumblr_lrh7ne1AGK1qlk81uo1_100.png
+  PhotoURL-75: http://30.media.tumblr.com/tumblr_lrh7ne1AGK1qlk81uo1_75sq.png
+- PostId: 6834479097
+  Permalink: http://blog.gaslightsoftware.com/post/6834479097
+  Type: Photo
+  Timestamp: 1308854919
+  Tags: []
+  Caption: <p>Some people call this &#8220;coffee.&#8221; I disagree.</p>
+  PhotoURL-1280: http://www.tumblr.com/photo/1280/6834479097/1/tumblr_ln9ax2pjfL1qlk81u
+  PhotoURL-500: http://27.media.tumblr.com/tumblr_ln9ax2pjfL1qlk81uo1_500.jpg
+  PhotoURL-400: http://26.media.tumblr.com/tumblr_ln9ax2pjfL1qlk81uo1_400.jpg
+  PhotoURL-250: http://26.media.tumblr.com/tumblr_ln9ax2pjfL1qlk81uo1_250.jpg
+  PhotoURL-100: http://26.media.tumblr.com/tumblr_ln9ax2pjfL1qlk81uo1_100.jpg
+  PhotoURL-75: http://30.media.tumblr.com/tumblr_ln9ax2pjfL1qlk81uo1_75sq.jpg
+Pages: []
